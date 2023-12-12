@@ -18,6 +18,29 @@ namespace DesafioFundamentos.Models
 
             string placa = Console.ReadLine();
 
+            placa = placa.Trim();
+
+            bool verificacao = true;
+
+            while (verificacao)
+            {
+                if (placa.Length == 8 && placa[3] == '-')
+                {
+                    verificacao = false;
+                }
+                else if (placa.Length == 7)
+                {
+                    placa = placa.Insert(3, "-");
+
+                    verificacao = false;
+
+                }
+                else
+                {
+                    Console.WriteLine("Digite a placa do veículo para estacionar válida: com 3 letras e 4 dígitos.");
+                    placa = Console.ReadLine();
+                }
+            }
             veiculos.Add(placa);
         }
 
