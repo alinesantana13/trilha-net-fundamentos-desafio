@@ -37,7 +37,7 @@ namespace DesafioFundamentos.Models
                 }
                 else
                 {
-                    Console.WriteLine("Digite a placa do veículo para estacionar válida: com 3 letras e 4 dígitos.");
+                    Console.WriteLine("Digite uma placa válida: com 3 letras e 4 dígitos.");
                     placa = Console.ReadLine();
                 }
             }
